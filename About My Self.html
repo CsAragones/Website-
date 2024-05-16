@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Web Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+    <title>About My Self</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            background-image: url("rain.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #ffffff;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(150, 150, 150, 0.5);
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: rgba(150, 150, 150, 0.7);
+        }
+
+        .intro-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .intro-container h1 {
+            font-size: 70px;
+            color: #fff;
+            margin-top: 50px;
+            font-family: 'Belleza';
+        }
+
+        .intro-container p {
+            font-size: 36px;
+            font-family: 'Belleza';
+            color: #ccc;
+            margin-top: 20px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            10% {
+                text-shadow: 0 0 20px rgba(255, 37, 66, 0.5);
+            }
+            100% {
+                text-shadow: 0 0 20px orange, 0 0 30px orange, 0 0 40px orange;
+            }
+        }
+
+
+        .character-selection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .character-option {
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .character-option a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .character-option img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .character-option:hover img {
+            transform: scale(1.1);
+            border-color: rgb(58, 57, 57);
+        }
+
+        .character-option p {
+            font-size: 15px;
+            color: #ce359b;
+            margin: 10px 0;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            text-shadow: 0 0 20px orange;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-color: rgb(255, 255, 255);
+            -webkit-text-stroke-width: 1px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="trestring.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <div class="intro-container">
+        <h1></h1>
+        <p>Welcome to my creative world! Each image represents a unique individual who has contributed to our journey. I'm passionate about creators who believe in the power of imagination and innovation. Tap any image to get to know us better.</p>
+    </div>
+
+    <div class="character-selection">
+        <div class="character-option" onclick="selectCharacter('warrior')">
+            <a href="Ana.html">
+                <img src="Aaannnaaa.jpg" alt="Warrior">
+                <p>Ana Valerie O. Aragones</p>
+            </a>
+        </div>
+
+
+    <script>
+        let selectedCharacter = null;
+
+        function selectCharacter(character) {
+            if (selectedCharacter) {
+                selectedCharacter.classList.remove('selected');
+            }
+
+            selectedCharacter = document.querySelector(`.character-option[onclick="selectCharacter('${character}')"]`);
+            selectedCharacter.classList.add('selected');
+        }
+    </script>
+</body>
+</html>

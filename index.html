@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Food Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("blk.gif");
+            margin: 0;
+            padding: 0;
+            background-image: url("blk.gif");
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 36px;
+            margin: 0;
+        }
+        ul.food-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        li.food-item {
+            margin: 10px;
+            height: auto;
+            width: 300px;
+            background-color: #5a5a5a;
+            border: 5px solid #000000;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        li.food-item a {
+            text-decoration: none;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        li.food-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .food-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            border: 5px solid #000000;
+        }
+        p {
+            font-size: 20px;
+            color: #ffffff;
+            margin: 0;
+            flex: 1; 
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(150, 150, 150, 0.5);
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <a href="trestring.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+    <h1>Pinoy Delicacy Selection</h1>
+
+    <ul class="food-list">
+        <li class="food-item">
+            <a href="puto binan.html">
+                <img class="food-image" src="Puto binan.jpg" alt="Puto Binan">
+                <p>Puto Binan (Laguna)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="Bibingkoy.html">
+                <img class="food-image" src="Bibingkoy.jpg" alt="Bibingkoy">
+                <p>Bibingkoy (Cavite)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="Budin.html">
+                <img class="food-image" src="Bud in.jpg" alt="Budin Cassava Cake">
+                <p>Budin Cassava Cake (Quezon Province)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=sushi">
+                <img class="food-image" src="Royal Bibingka.jpg" alt="Royal Bibingka">
+                <p>Royal Bibingka (Vigan)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="Inutak.jpg" alt="Inutak">
+                <p>Inutak (Taguig)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="Ibos.jpg" alt="Ibos">
+                <p>Ibos (Bicol)</p>
+            </a>
+        </li> 
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="Tabog-tabog.jpg" alt="Tabog-tabog">
+                <p>Tabog-Tabog (Bicol)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="Kalingking.jpg" alt="Kalingking">
+                <p>Kalingking (Bicol)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="Sinapot.jpg" alt="Sinapot">
+                <p>Sinapot (Bicol)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="Nilupak.jpg" alt="Nilupak">
+                <p>Nilupak (Bicol)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="Mandaue.jpg" alt="Bibingkang Mandaue">
+                <p>Bibingkang Mandaue (Cebu)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="Sapin-Sapin.jpg" alt="Sapin-Sapin">
+                <p>Sapin-Sapin (Abra)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="Tikoy.jpg" alt="Tikoy">
+                <p>Quezon Tikoy (Quezon)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="Buchi-Buchi.jpg" alt="Buchi-Buchi">
+                <p>Buchi-Buchi (Batangas)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="Kalamay Hati.jpg" alt="Kalamay Hati">
+                <p>Kalamay Hati (Bohol)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="Kutsinta.jpg" alt="Kutsinta">
+                <p>Kutsinta (Mindanao)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="Ube.jpg" alt="Ube">
+                <p>Cheesy Ube Halaya (Pampanga)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="Calasiao.jpg" alt="Puto Calasiao">
+                <p>Puto Calasiao (Pangasinan)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="ensaymada.jpg" alt="Ensaymada">
+                <p>Ensaymada de Malolos (Malolos, Bulacan)</p>
+            </a>
+        </li>
+        <li class="food-item">
+            <a href="food.html?food=taco">
+                <img class="food-image" src="suman.jpg" alt="Suman">
+                <p>Suman Budbud (Cebu)</p>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

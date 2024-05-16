@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Web Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Food Selection</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Rock well';
+            background-image: url("dg.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            padding: 10px;
+            margin-left: 500px;
+            margin-right: 500px;
+            background-color: #333;
+            color: rgb(31, 31, 31);
+            font-size: 36px; /* Increase font size */
+            font-weight: bold; /* Make it bold */
+            text-transform: uppercase; /* Uppercase text */
+            letter-spacing: 2px; /* Add letter spacing for a sleek look */
+            border-bottom: 4px solid #5c5c5c;
+            border-top: 4px solid #5c5c5c;
+            border-left: 4px solid #5c5c5c;
+            border-right: 4px solid #5c5c5c;
+            font-family: 'Gill Sans';
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            color: rgb(31, 31, 31);
+        }
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+            background-color: #5a5751;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 7px;
+            border-bottom: 4px solid #000000;
+            border-top: 4px solid #000000;
+            border-left: 4px solid #000000;
+            border-right: 4px solid #000000;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .product:hover {
+            transform: scale(1.07);
+            box-shadow: 0px 0px 50px rgba(199, 176, 176, 0.3);
+        }
+        .product img {
+            max-width: 100%;
+            height: 150px; /* Set a fixed height for the product images */
+            width: auto; /* Automatically adjust the width to maintain aspect ratio */
+            margin-bottom: 10px;
+            border-radius: 7px;
+            border-bottom: 4px solid #5a5751;
+            border-top: 4px solid #5a5751;
+            border-left: 4px solid #5a5751;
+            border-right: 4px solid #5a5751;
+        }
+        .product h2 {
+            font-size: 30px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        .product p {
+            font-size: 16px;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(150, 150, 150, 0.5);
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin-bottom: 100px; /* Center the slideshow */
+            margin-top: 70px;
+            text-align: center;
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: 600px; /* Set a fixed height for the slideshow images */
+            object-fit:fill; /* Maintain the image's aspect ratio and cover the container */
+        }
+    </style>
+</head>
+<body>
+    <a href="trestring.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <div class="slideshow-container">
+        <img class="mySlides" src="iits.png" alt="Slideshow Image 1">
+        <img class="mySlides" src="ss.JPG" alt="Slideshow Image 2">
+        <img class="mySlides" src="pica.jpg" alt="Slideshow Image 3">
+      </div>
+
+      <h1>DELICACIES</h1>
+      
+    <div class="container">
+        <div class="product">
+            <a href="puto binan.html">
+            <img src="Puto Binan.jpg" alt="Puto Binan">
+        </a>
+            <h2>Puto Binan (Laguna)</h2>
+        </div>
+        <div class="product">
+            <a href="Bibingkoy.html">
+            <img src="bibingkoy.jpg" alt="Product 1">
+        </a>
+            <h2>Bibingkoy (Cavite)</h2>
+        </div>
+        <div class="product">
+            <a href="Budin.html">
+            <img src="Bud in.jpg" alt="Product 1">
+        </a>
+            <h2>Budin Cassava Cake (Quezon Province)</h2>
+        </div>
+        <div class="product">
+            <a href="royal bibingka.html">
+            <img src="Royal Bibingka.jpg" alt="Product 1">
+        </a>
+            <h2>Royal Bibingka (Vigan)</h2>
+        </div><div class="product">
+            <a href="inutak.html">
+            <img src="Inutak.jpg" alt="Product 1">
+        </a>
+            <h2>Inutak (Taguig)</h2>
+        </div>
+        <div class="product">
+            <a href="ibos.html">
+            <img src="Ibos.jpg" alt="Product 1">
+        </a>
+            <h2>Ibos (Bicol)</h2>
+        </div>
+        <div class="product">
+            <a href="tabog.html">
+            <img src="Tabog-tabog.jpg" alt="Product 1">
+        </a>
+            <h2>Tabog-Tabog (Bicol)</h2>
+        </div>
+        <div class="product">
+            <a href="Kalingking.html">
+            <img src="Kalingking.jpg" alt="Product 1">
+        </a>
+            <h2>Kalingking (Bicol)</h2>
+        </div>
+        <div class="product">
+            <a href="Sinapot.html">
+            <img src="Sinapot.jpg" alt="Product 1">
+        </a>
+            <h2>Sinapot (Bicol)</h2>
+        </div>
+        <div class="product">
+            <a href="Nilupak.html">
+            <img src="Nilupak.jpg" alt="Product 1">
+        </a>
+            <h2>Nilupak (Bicol)</h2>
+        </div>
+        <div class="product">
+            <a href="Bibingkang Mandaue.html">
+            <img src="Mandaue.jpg" alt="Product 1">
+        </a>
+            <h2>Bibingkang Mandaue (Cebu)</h2>
+        </div>
+        <div class="product">
+            <a href="Sapin-sapin.html">
+            <img src="Sapin-Sapin.jpg" alt="Product 1">
+        </a>
+            <h2>Sapin-Sapin (Abra)</h2>
+        </div>
+        <div class="product">
+            <a href="product1-info.html">
+            <img src="Tikoy.jpg" alt="Product 1">
+        </a>
+            <h2>Quezon Tikoy (Quezon)</h2>
+        </div>
+        <div class="product">
+            <a href="product1-info.html">
+            <img src="Buchi-Buchi.jpg" alt="Product 1">
+        </a>
+            <h2>Buchi-Buchi (Batangas)</h2>
+        </div>
+        <div class="product">
+            <a href="kalamay hati.html">
+            <img src="Kalamay Hati.jpg" alt="Product 1">
+        </a>
+            <h2>Kalamay Hati (Bohol)</h2>
+        </div>
+        <div class="product">
+            <a href="Ku.html">
+            <img src="Kutsinta.jpg" alt="Product 1">
+        </a>
+            <h2>Kutsinta (Mindanao)</h2>
+        </div>
+        <div class="product">
+            <a href="Cheesy Ube Halaya Pampanga.html">
+            <img src="Ube.jpg" alt="Product 1">
+        </a>
+            <h2>Cheesy Ube Halaya (Pampanga)</h2>
+        </div>
+        <div class="product">
+            <a href="Puto Calasioa Pangasinan.html">
+            <img src="Calasiao.jpg" alt="Product 1">
+        </a>
+            <h2>Puto Calasiao (Pangasinan)</h2>
+        </div>
+        <div class="product">
+            <a href="Ensaymada.html">
+            <img src="ensaymada.jpg" alt="Product 1">
+        </a>
+            <h2>Ensaymada de Malolos (Malolos, Bulacan)</h2>
+        </div>
+        <div class="product">
+            <a href="sagmani.html">
+            <img src="Sagmani leyte.webp" alt="Product 1">
+        </a>
+            <h2>Sagmani (Leyte)</h2>
+        </div>
+
+        <script>
+            let slideIndex = 0;
+          
+            function showSlides() {
+              let i;
+              const slides = document.getElementsByClassName("mySlides");
+          
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+          
+              slideIndex++;
+          
+              if (slideIndex > slides.length) {
+                slideIndex = 1;
+              }
+          
+              slides[slideIndex - 1].style.display = "block";
+              setTimeout(showSlides, 5000); // Change image every 2 seconds (you can adjust this value)
+            }
+          
+            showSlides(); // Call the function to start the slideshow
+          </script>
+          
+
+        
+
+    </div>
+</body>
+</html>

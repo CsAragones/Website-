@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SELECTION</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Web Logo.png" type="image/x-icon">
+    <!-- Fontawesome Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Import Google font - Poppins */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Belleza';
+    }
+    body {
+      display: flex;
+      padding: 0 35px;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-image: url("Gg.jpg");
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .wrapper {
+      max-width: 1100px;
+      width: 100%;
+      position: relative;
+    }
+    .wrapper i {
+      top: 50%;
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+      font-size: 1.25rem;
+      position: absolute;
+      text-align: center;
+      line-height: 50px;
+      background: #350000;
+      color: white;
+      border-radius: 50%;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+      transform: translateY(-50%);
+      transition: transform 0.1s linear;
+    }
+    .wrapper i:active{
+      transform: translateY(-50%) scale(0.85);
+    }
+    .wrapper i:first-child{
+      left: -22px;
+    }
+    .wrapper i:last-child{
+      right: -22px;
+    }
+    .wrapper .carousel{
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc((100% / 3) - 12px);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 16px;
+      border-radius: 8px;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel.no-transition {
+      scroll-behavior: auto;
+    }
+    .carousel.dragging {
+      scroll-snap-type: none;
+      scroll-behavior: auto;
+    }
+    .carousel.dragging .card {
+      cursor: grab;
+      user-select: none;
+    }
+    .carousel :where(.card, .img) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .carousel .card {
+      scroll-snap-align: start;
+      height: 342px;
+      list-style: none;
+      background:transparent;
+      background-size: cover;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      padding-bottom: 15px;
+      flex-direction: column;
+      border-radius: 8px;
+      
+    }
+    .carousel .card .img {
+      background: #350000;
+      height: 210px;
+      width: 240px;
+      border-radius: 20%;
+    }
+    .card .img img {
+      width: 230px;
+      height: 200px;
+      border-radius: 20%;
+      object-fit: cover;
+      border: 4px solid #000000;
+    }
+    .carousel .card h2 {
+      font-weight: 500;
+      font-size: 1.56rem;
+      margin: 30px 0 5px;
+      -webkit-text-fill-color: #000000;
+      -webkit-text-stroke: 1px;
+      -webkit-text-stroke-width: 1px;
+    }
+    .carousel .card span {
+      color: #000000;
+      font-size: 1.31rem;
+      font-weight: bold;
+    }
+    @media screen and (max-width: 900px) {
+      .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .wrapper .carousel {
+        grid-auto-columns: 100%;
+      }
+    }
+    .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background-color: rgba(150, 150, 150, 0.5);
+        border: none;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    h1{
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color:transparent;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-family: 'Belleza';
+        font-size: 50px;
+        font-weight: bold;
+    }
+    </style>
+  </head>
+  <body>
+    <a href="trestring.html" class="back-button">
+      <i class="fas fa-arrow-left"></i>
+  </a>
+  <h1>DELICACY CAROUSEL</h1>
+    <div class="wrapper">
+      <i id="left" class="fa-solid fa-angle-left"></i>
+      <ul class="carousel">
+        <li class="card">
+          <a href="puto binan.html">
+          <div class="img"><img src="Puto binan.jpg" alt="img" draggable="false"></div></a>
+          <h2>Puto Binan</h2>
+          <span>(Binan, Laguna)</span>
+        </li>
+        <li class="card">
+          <a href="Bibingkoy.html">
+          <div class="img"><img src="bibingkoy.jpg" alt="img" draggable="false"></div></a>
+          <h2>Bibingkoy</h2>
+          <span>(Cavite)</span>
+        </li>
+        <li class="card">
+          <a href="Budin.html">
+          <div class="img"><img src="Bud in.jpg" alt="img" draggable="false"></div></a>
+          <h2>Budin Cassava Cake</h2>
+          <span>(Quezon Province)</span>
+        </li>
+        <li class="card">
+          <a href="royal bibingka.html">
+          <div class="img"><img src="Royal Bibingka.jpg" alt="img" draggable="false"></div></a>
+          <h2>Royal Bibingka</h2>
+          <span>(Vigan)</span>
+        </li>
+        <li class="card">
+          <a href="inutak.html">
+          <div class="img"><img src="Inutak.jpg" alt="img" draggable="false"></div></a>
+          <h2>Inutak</h2>
+          <span>(Taguig)</span>
+        </li>
+        <li class="card">
+          <a href="ibos.html">
+          <div class="img"><img src="Ibos.jpg" alt="img" draggable="false"></div></a>
+          <h2>Ibos</h2>
+          <span>(Bicol)</span>
+        </li>
+        <li class="card">
+          <a href="tabog.html">
+          <div class="img"><img src="Tabog-tabog.jpg" alt="img" draggable="false"></div></a>
+          <h2>Tabog-Tabog</h2>
+          <span>(Bicol)</span>
+        </li>
+        <li class="card">
+          <a href="Kalingking.html">
+          <div class="img"><img src="Kalingking.jpg" alt="img" draggable="false"></div></a>
+          <h2>Kalingking</h2>
+          <span>(Bicol)</span>
+        </li>
+        <li class="card">
+          <a href="Sinapot.html">
+          <div class="img"><img src="Sinapot.jpg" alt="img" draggable="false"></div></a>
+          <h2>Sinapot</h2>
+          <span>(Bicol)</span>
+        </li>
+        <li class="card">
+          <a href="Nilupak.html">
+          <div class="img"><img src="Nilupak.jpg" alt="img" draggable="false"></div></a>
+          <h2>Nilupak</h2>
+          <span>(Bicol)</span>
+        </li>
+        <li class="card">
+          <a href="Bibingkang Mandaue.html">
+          <div class="img"><img src="Mandaue.jpg" alt="img" draggable="false"></div></a>
+          <h2>Bibingkang Mandaue</h2>
+          <span>(Cebu)</span>
+        </li>
+        <li class="card">
+          <a href="Sapin-sapin.html">
+          <div class="img"><img src="Sapin-Sapin.jpg" alt="img" draggable="false"></div></a>
+          <h2>Sapin-Sapin</h2>
+          <span>(Abra)</span>
+        </li>
+        <li class="card">
+          <a href="kalamay hati.html">
+          <div class="img"><img src="Kalamay Hati.jpg" alt="img" draggable="false"></div></a>
+          <h2>Kalamay Hati</h2>
+          <span>(Bohol)</span>
+        </li>
+        <li class="card">
+          <a href="Ku.html">
+          <div class="img"><img src="Kutsinta.jpg" alt="img" draggable="false"></div></a>
+          <h2>Kutsinta</h2>
+          <span>(Mindanao)</span>
+        </li>
+        <li class="card">
+          <a href="Cheesy Ube Halaya Pampanga.html">
+          <div class="img"><img src="Ube.jpg" alt="img" draggable="false"></div></a>
+          <h2>Cheesy Ube Halaya</h2>
+          <span>(Pampanga)</span>
+        </li>
+        <li class="card">
+          <a href="Puto Calasioa Pangasinan.html">
+          <div class="img"><img src="Calasiao.jpg" alt="img" draggable="false"></div></a>
+          <h2>Kutsinta</h2>
+          <span>(Mindanao)</span>
+        </li>
+        <li class="card">
+          <a href="sagmani.html">
+          <div class="img"><img src="Sagmani leyte.webp" alt="img" draggable="false"></div></a>
+          <h2>Sagmani</h2>
+          <span>(Leyte)</span>
+        </li>
+        <li class="card">
+          <a href="Ensaymada.html">
+          <div class="img"><img src="ensaymada.jpg" alt="img" draggable="false"></div></a>
+          <h2>Ensaymada De Malolos</h2>
+          <span>(Malolos, Bulacan)</span>
+        </li>
+        <li class="card">
+          <a href="Puto Lanson.html">
+          <div class="img"><img src="puto lanson.jpg" alt="img" draggable="false"></div></a>
+          <h2>Puto Lanson</h2>
+          <span>(Ilo-Ilo City)</span>
+        </li>
+        <li class="card">
+          <a href="Quezon Tikoy.html">
+          <div class="img"><img src="quezon tikoy.webp" alt="img" draggable="false"></div></a>
+          <h2>Quezon Tikoy</h2>
+          <span>(Quezon)</span>
+        </li>
+      </ul>
+      <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+
+    <script>
+    const wrapper = document.querySelector(".wrapper");
+    const carousel = document.querySelector(".carousel");
+    const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+    const arrowBtns = document.querySelectorAll(".wrapper i");
+    const carouselChildrens = [...carousel.children];
+
+    let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+
+    // Get the number of cards that can fit in the carousel at once
+    let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+    // Insert copies of the last few cards to beginning of carousel for infinite scrolling
+    carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+        carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+    });
+
+    // Insert copies of the first few cards to end of carousel for infinite scrolling
+    carouselChildrens.slice(0, cardPerView).forEach(card => {
+        carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+    });
+
+    // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.offsetWidth;
+    carousel.classList.remove("no-transition");
+
+    // Add event listeners for the arrow buttons to scroll the carousel left and right
+    arrowBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+        });
+    });
+    const dragStart = (e) => {
+        isDragging = true;
+        carousel.classList.add("dragging");
+        // Records the initial cursor and scroll position of the carousel
+        startX = e.pageX;
+        startScrollLeft = carousel.scrollLeft;
+    }
+    const dragging = (e) => {
+        if(!isDragging) return; // if isDragging is false return from here
+        // Updates the scroll position of the carousel based on the cursor movement
+        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+    }
+
+    const dragStop = () => {
+        isDragging = false;
+        carousel.classList.remove("dragging");
+    }
+
+    const infiniteScroll = () => {
+        // If the carousel is at the beginning, scroll to the end
+        if(carousel.scrollLeft === 0) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+            carousel.classList.remove("no-transition");
+        }
+        // If the carousel is at the end, scroll to the beginning
+        else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.offsetWidth;
+            carousel.classList.remove("no-transition");
+        }
+
+        // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+        clearTimeout(timeoutId);
+        if(!wrapper.matches(":hover")) autoPlay();
+    }
+
+    const autoPlay = () => {
+        if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+        // Autoplay the carousel after every 2500 ms
+        timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 3000);
+    }
+    autoPlay();
+
+    carousel.addEventListener("mousedown", dragStart);
+    carousel.addEventListener("mousemove", dragging);
+    document.addEventListener("mouseup", dragStop);
+    carousel.addEventListener("scroll", infiniteScroll);
+    wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+    wrapper.addEventListener("mouseleave", autoPlay);
+    </script>
+
+  </body>
+</html>

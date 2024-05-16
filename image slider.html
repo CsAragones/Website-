@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Web Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Food Selection</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Rock well';
+            background-image: url("dg.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            padding: 10px;
+            margin-left: 500px;
+            margin-right: 500px;
+            background-color: #333;
+            color: rgb(0, 0, 0);
+            font-size: 36px; /* Increase font size */
+            font-weight: bold; /* Make it bold */
+            text-transform: uppercase; /* Uppercase text */
+            letter-spacing: 2px; /* Add letter spacing for a sleek look */
+            border-bottom: 4px solid #5c5c5c;
+            border-top: 4px solid #5c5c5c;
+            border-left: 4px solid #5c5c5c;
+            border-right: 4px solid #5c5c5c;
+            font-family: 'Gill Sans';
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            color: rgb(31, 31, 31);
+        }
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+            background-color: #5a5751;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 7px;
+            border-bottom: 4px solid #000000;
+            border-top: 4px solid #000000;
+            border-left: 4px solid #000000;
+            border-right: 4px solid #000000;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .product:hover {
+            transform: scale(1.07);
+            box-shadow: 0px 0px 50px rgba(199, 176, 176, 0.3);
+        }
+        .product img {
+            max-width: 100%;
+            height: 150px; /* Set a fixed height for the product images */
+            width: auto; /* Automatically adjust the width to maintain aspect ratio */
+            margin-bottom: 10px;
+            border-radius: 7px;
+            border-bottom: 4px solid #5a5751;
+            border-top: 4px solid #5a5751;
+            border-left: 4px solid #5a5751;
+            border-right: 4px solid #5a5751;
+        }
+        .product h2 {
+            font-size: 30px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        .product p {
+            font-size: 16px;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(150, 150, 150, 0.5);
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin-bottom: 100px; /* Center the slideshow */
+            margin-top: 70px;
+            text-align: center;
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: 600px; /* Set a fixed height for the slideshow images */
+            object-fit: fill; /* Maintain the image's aspect ratio and cover the container */
+        }
+
+        /* Search container styles */
+        #search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #search-bar {
+            padding: 10px;
+        }
+
+        #search-results {
+            display: none;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <a href="trestring.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <div class="slideshow-container">
+        <img class="mySlides" src="iits.png" alt="Slideshow Image 1">
+        <img class="mySlides" src="ss.JPG" alt="Slideshow Image 2">
+        <img class="mySlides" src="pica.jpg" alt="Slideshow Image 3">
+    </div>
+
+    <h1>DELICACIES</h1>
+
+    <div class="container">
+        <!-- Your product items here -->
+        <!-- Add your product items here -->
+
+        <div class="product">
+            <a href="puto binan.html">
+                <img src="Puto Binan.jpg" alt="Puto Binan">
+            </a>
+            <h2>Puto Binan (Laguna)</h2>
+        </div>
+        <!-- Add more product items as needed -->
+
+    </div>
+
+    <!-- Search container -->
+    <div id="search-container">
+        <input type="text" id="search-bar" placeholder="Search for products">
+        <div id="search-results">
+            <h2>Search Results:</h2>
+            <ul id="results-list">
+                <!-- Results will be displayed here -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Your existing slideshow script here
+        let slideIndex = 0;
+          
+            function showSlides() {
+              let i;
+              const slides = document.getElementsByClassName("mySlides");
+          
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+          
+              slideIndex++;
+          
+              if (slideIndex > slides.length) {
+                slideIndex = 1;
+              }
+          
+              slides[slideIndex - 1].style.display = "block";
+              setTimeout(showSlides, 5000); // Change image every 2 seconds (you can adjust this value)
+            }
+          
+            showSlides(); // Call the function to start the slideshow 
+
+        // Product search functionality
+        const searchInput = document.getElementById("search-bar");
+        const searchResults = document.getElementById("search-results");
+        const resultsList = document.getElementById("results-list");
+
+        // Example product data as an array of objects
+        const products = [
+            {
+                name: "Laptop",
+                imageSrc: "laptop.jpg",
+                description: "A powerful laptop for work and entertainment."
+            },
+            {
+                name: "Smartphone",
+                imageSrc: "smartphone.jpg",
+                description: "The latest smartphone with advanced features."
+            },
+            {
+                name: "Headphones",
+                imageSrc: "headphones.jpg",
+                description: "High-quality headphones for an immersive audio experience."
+            },
+            // Add more products here
+        ];
+
+        searchInput.addEventListener("input", function () {
+            const query = searchInput.value.toLowerCase();
+            const filteredProducts = products.filter((product) =>
+                product.name.toLowerCase().includes(query) || product.description.toLowerCase().includes(query)
+            );
+
+            displayResults(filteredProducts);
+        });
+
+        function displayResults(results) {
+            resultsList.innerHTML = "";
+            if (results.length === 0) {
+                resultsList.innerHTML = "<p>No matching products found.</p>";
+            } else {
+                results.forEach((product) => {
+                    const listItem = document.createElement("li");
+                    const productImage = document.createElement("img");
+                    productImage.src = product.imageSrc;
+                    const productDetails = document.createElement("div");
+                    productDetails.innerHTML = `<h3>${product.name}</h3><p>${product.description}</p>`;
+                    listItem.appendChild(productImage);
+                    listItem.appendChild(productDetails);
+                    resultsList.appendChild(listItem);
+                });
+            }
+
+            searchResults.style.display = "block";
+        }
+    </script>
+</body>
+</html>

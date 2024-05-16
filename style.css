@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("Gg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    position: relative;
+}
+
+header {
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.nav-menu li {
+    margin: 0 20px;
+}
+
+.nav-menu a {
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #000000;
+    font-size: 26px;
+    font-family: 'Belleza';
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0);
+    transform: perspective(1000px) rotateY(0deg);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    box-shadow: 0 0px 100px rgb(243, 243, 243), 0 0 50px rgb(0, 0, 0) 0 0 30px rgb(56, 56, 56) inset;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.644);
+}
+.nav-menu a:hover {
+    background-color: rgba(116, 116, 116, 0.781);
+    transform: perspective(1000px) rotateY(180deg);
+}
+h1 {
+    color: #000;
+}
+.footer {
+    text-align: center;
+    background-color: #464646;
+    color: #ffffff;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+.intro-section, .mission-section {
+    width: 48%;
+    margin: 0px; /* Added margin for spacing */
+    padding: 20px; /* Added padding for spacing and readability */
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+}
+
+    /* CSS for heading style */
+.intro-section h1, .mission-section h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Belleza';
+}
+
+    /* CSS for paragraph style */
+.intro-section p, .mission-section p {
+    font-size: 25px;
+    text-indent: 7%;
+    color: rgb(0, 0, 0);
+    line-height: 1.4;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding:20px;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(138, 137, 137, 0.575);
+    font-family: 'Belleza';
+}

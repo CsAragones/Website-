@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="Web Logo.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("Gg.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        h1, p, form {
+            text-align: center;
+            width: 80%;
+            font-family: 'Belleza';
+        }
+        h1 {
+            font-size: 60px;
+            margin-top: 0;
+        }
+        p {
+            font-size: 30px;
+        }
+        form {
+            margin-top: 20px;
+            margin-left: 30%;
+            margin-right: 30%;
+        }
+        form input {
+            text-align: left;
+            border-radius: 30px;
+            text-indent: 10%;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        textarea, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: rgb(58, 58, 58);
+            color: white;
+            font-size: 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 30px lightyellow;
+            text-indent: 10%;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #000000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+        button:hover {
+            background-color: #333333;
+        }
+        #confirmationMessage {
+            margin-top: 40px;
+            display: none;
+            color: #000000;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        input{
+            background-color: rgb(58, 58, 58);
+            color: white;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(150, 150, 150, 0.5);
+            border: none;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .feedbackForm{
+           border: 1px solid black;
+        } 
+    </style>
+</head>
+<body>
+    <a href="trestring.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+    <h1>Feedback</h1>
+    <p><b>We value your feedback! Please let us know what you think about our Website.</b></p>
+    <form id="feedbackForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" rows="3" required></textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="confirmationMessage"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const feedbackForm = document.getElementById("feedbackForm");
+            const confirmationMessage = document.getElementById("confirmationMessage");
+            feedbackForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const feedback = document.getElementById("feedback").value;
+                confirmationMessage.innerText = `Thank you, ${name}! Your feedback has been received.`;
+                confirmationMessage.style.display = "block";
+                feedbackForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>
